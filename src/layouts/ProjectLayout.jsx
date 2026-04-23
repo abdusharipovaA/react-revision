@@ -9,9 +9,9 @@ function ProjectLayout() {
         </Link>
       </div>
 
-      <Outlet />
+      < Outlet />
     </>
-  );
+  );jjd
 }
 
 export default ProjectLayout;
