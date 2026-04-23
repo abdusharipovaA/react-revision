@@ -11,7 +11,7 @@ function ProjectLayout() {
 
       < Outlet />
     </>
-  );jjd
+  );
 }
 
 export default ProjectLayout;
