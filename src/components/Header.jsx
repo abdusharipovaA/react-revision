@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <nav>
-        <div className="logo">Abbos Projects</div>
+        <div className="logo">Oygul Projects</div>
         <ul>
           <li>
             <Link to={"/"}>Home</Link>
