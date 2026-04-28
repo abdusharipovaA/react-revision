@@ -5,7 +5,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Stopwatch from "./pages/Stopwatch";
-import Layout from "./layouts/layout";
+import Layout from "./layouts/Layout";
+import TodoApp from "./pages/TodoApp";
+import ProjectLayout from "./layouts/ProjectLayouts";
+import CounterApp from "./pages/Counter";
 
 function App() {
   return (
@@ -17,8 +20,11 @@ function App() {
           <Route index element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
-          <Route path="/projects/stopwatch" element={<Stopwatch />}></Route>
-          <Route path="/projects/stopwatch" element={<Stopwatch />}></Route>
+          <Route path="/projects" element={<ProjectLayout />}>
+            <Route path="/projects/stopwatch" element={<Stopwatch />}></Route>
+            <Route path="/projects/todo" element={<TodoApp />}></Route>
+            <Route path="/projects/counter" element={<CounterApp />}></Route>
+          </Route>
         </Route>
       </Routes>
     </>
