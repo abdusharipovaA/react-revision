@@ -5,11 +5,11 @@ function ProjectLayout() {
     <>
       <div className="text-left">
         <Link to={"/projects"}>
-          <i class="fa-solid fa-left-long"></i>
+          <i className="fa-solid fa-left-long"></i>
         </Link>
       </div>
 
-      <Outlet />
+      < Outlet />
     </>
   );
 }

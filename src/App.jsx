@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router";
+import { Routes, Route } from "react-router";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -7,7 +7,7 @@ import Projects from "./pages/Projects";
 import Stopwatch from "./pages/Stopwatch";
 import Layout from "./layouts/Layout";
 import TodoApp from "./pages/TodoApp";
-import ProjectLayout from "./layouts/ProjectLayouts";
+import ProjectLayout from "./layouts/ProjectLayout";
 import CounterApp from "./pages/Counter";
 
 function App() {
@@ -17,13 +17,14 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/projects" element={<Projects />}></Route>
-          <Route path="/projects" element={<ProjectLayout />}>
-            <Route path="/projects/stopwatch" element={<Stopwatch />}></Route>
-            <Route path="/projects/todo" element={<TodoApp />}></Route>
-            <Route path="/projects/counter" element={<CounterApp />}></Route>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+
+          <Route path="projects" element={<ProjectLayout />}>
+            <Route index element={<Projects />} />
+            <Route path="stopwatch" element={<Stopwatch />} />
+            <Route path="todo" element={<TodoApp />} />
+            <Route path="counter" element={<CounterApp />} />
           </Route>
         </Route>
       </Routes>

@@ -5,6 +5,18 @@
     transition: all 0.4s;
 }
 
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #e6b980, #eacda3);
+  height: 100vh;
+}
+html {
+    background: linear-gradient(90deg, #eac0f0, #c9ab52, #cfc4ec);
+    color: white
+    ;
+}
+
 li {
     list-style: none;
 }
@@ -16,9 +28,9 @@ a {
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(211, 223, 148);
     align-items: center;
     padding: 1rem 2rem;
+    box-shadow: 2px 2px 10px rgb(73, 73, 73);
 }
 
 nav .logo {
@@ -26,6 +38,10 @@ nav .logo {
     font-weight: 600;
     text-transform: uppercase;
     font-family: 'Courier New', Courier, monospace;
+    background-image: linear-gradient(90deg, #81c2e0, #b65fa0);
+    -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; 
 }
 
 nav ul {
@@ -38,14 +54,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #444;
+    color: white;
     font-size: 20px;
     padding: 4px 6px;
 }
 
 nav ul li a:hover{
-    text-decoration: underline;
-    color: #000;
+    color: #5f86b8;
 }
 
 /* ====   layout ===== */
@@ -108,7 +123,7 @@ nav ul li a:hover{
 
 
 input {
-    border: 2px solid blue;
+    border: 2px solid rgb(115, 115, 212);
     border-radius: 5px;
     height: 4vh;
     align-items: center;
@@ -130,7 +145,7 @@ input {
     
 }
 .BoardBox button  {
-    background-color: red;
+    background-color: rgb(156, 97, 204);
     border: none;
     border-radius: 5px;
     height: 4vh;
@@ -148,14 +163,150 @@ input {
    width: 31%;
     padding: 40px;
     border-radius: 5px;
-   
- 
-    
-
 }
+
 .Board {
     display: flex;
     gap:10px;
     flex-wrap: wrap;
     margin-top: 20px;
+}
+
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.badge {
+  background: orange;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+/* CONTAINER */
+.wrap-counter {
+  width: 500px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #b9d6dc;
+  border-radius: 20px;
+  border: 4px solid #6ec1d6;
+  position: relative;
+}
+/* 
+/* SHADOW BOX (orqa effekt) */
+.wrap-counter::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+  background: #b9d6dc;
+  border-radius: 20px;
+  border: 4px solid #6ec1d6;
+  z-index: -1; 
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* ITEMS BADGE */
+.counter-items {
+  background: #2aa7b8;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+/* ICONS TOP */
+.m-10 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.m-10 i {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.fa-arrows-rotate {
+  background: #28a745;
+}
+
+.fa-recycle {
+  background: #5bc0de;
+}
+
+/* COUNTER ROW */
+.wrap-counter > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+/* COUNT BADGE */
+.count {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+}
+
+.btn-warning {
+  background: #ffc107;
+  color: black;
+}
+
+.btn-info {
+  background: #17a2b8;
+  color: white;
+}
+
+/* BUTTONS */
+.btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-start {
+  background: green;
+  color: white;
+}
+
+.btn-stop {
+  background: red;
+  color: white;
+}
+
+/* DELETE ICON */
+.fa-trash {
+  background: #dc3545;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
 }
